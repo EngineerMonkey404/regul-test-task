@@ -20,11 +20,15 @@
       >
         Разместить объявление
       </q-btn>
-      <ProfileButton class="header__profile-button" />
+      <ClientOnly>
+        <ProfileButton class="header__profile-button" />
+      </ClientOnly>
+
     </div>
   </q-toolbar>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped lang="scss"></style>

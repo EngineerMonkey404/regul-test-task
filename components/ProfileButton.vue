@@ -10,14 +10,13 @@
       name="img:/icons/hamburger.svg"
       class="profile-button__icon"
     />
-    <ClientOnly>
+
       <q-avatar
         v-if="authStore.user"
         size="40px"
       >
         <img :src="authStore.user!.image" />
       </q-avatar>
-    </ClientOnly>
     <q-skeleton
       v-if="!authStore.user"
       type="QAvatar"

@@ -1,0 +1,31 @@
+@use 'fonts';
+@use 'variables';
+
+.footer {
+  padding: 24px 32px 40px 32px;
+  @extend .font-inter;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dbdbdb;
+  &__link-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__company-name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: variables.$black;
+  }
+
+  &__link {
+    color: #6b6b6b;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+}

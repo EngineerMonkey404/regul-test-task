@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'fonts';
+
+.mobile {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: variables.$header-bg;
+    &__logo-container {
+      padding: 2px 6px 2px 7px;
+    }
+    &__logo {
+      @extend .font-noto-serif;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &__right-part-container {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    &__menu-container {
+      padding: 8px;
+    }
+
+    &__badge {
+      background-color: unset;
+    }
+  }
+}

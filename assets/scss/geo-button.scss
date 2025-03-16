@@ -1,0 +1,18 @@
+@use 'fonts';
+
+.geo-button {
+  padding: 4px 6px;
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  &__text {
+    @extend .font-inter;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+}

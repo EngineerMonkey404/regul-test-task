@@ -1,0 +1,43 @@
+@use 'variables';
+@use 'fonts';
+
+.header {
+  background-color: variables.$header-bg;
+  &__logo {
+    @extend .font-noto-serif;
+    margin: 10px 25px 10px 8px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+  }
+  &__category-button {
+    margin-left: 12px;
+  }
+
+  &__right-part-container {
+    display: flex;
+    align-items: center;
+  }
+  &__separator {
+    margin: 8px 12px;
+  }
+
+  &__place-button {
+    @extend .font-inter;
+    margin: 4px 0;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &__geo-button {
+    margin: 8px 0;
+  }
+
+  &__profile-button {
+    margin-left: 24px;
+  }
+}

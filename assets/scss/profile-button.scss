@@ -1,0 +1,18 @@
+@use 'fonts';
+
+.profile-button {
+  padding: 4px 4px 4px 12px;
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__text {
+    @extend .font-inter;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

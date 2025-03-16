@@ -1,0 +1,17 @@
+@use 'fonts';
+
+.subject-info {
+  @extend .font-inter;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+  padding-right: 11px;
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}

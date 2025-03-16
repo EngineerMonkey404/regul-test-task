@@ -1,0 +1,50 @@
+@use 'fonts';
+@use 'variables';
+
+.mobile {
+  &-footer {
+    padding: 24px 16px 40px 16px;
+    @extend .font-inter;
+    background-color: #f5f5f5;
+    border-top: 1px solid #dbdbdb;
+    &__link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__company-name {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: variables.$black;
+    }
+
+    &__link {
+      color: #6b6b6b;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+
+    &__language-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 6px 4px 6px;
+    }
+
+    &__language {
+      color: variables.$black;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+  }
+}

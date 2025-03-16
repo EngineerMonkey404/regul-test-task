@@ -1,0 +1,69 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixins';
+
+.agent-card {
+  padding: 20px;
+  background-color: variables.$agent-container;
+  color: variables.$on-agent-container;
+  display: flex;
+  max-width: 560px;
+  border-radius: 20px;
+  gap: 20px;
+
+  @include mixins.mobile {
+    padding: 16px;
+  }
+
+  &__image {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 140px;
+    height: 140px;
+  }
+  &__mobile-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__mobile-image {
+    object-fit: cover;
+    border-radius: 12px;
+    display: inline;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+  }
+
+  &__name {
+    @extend .font-inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+    @include mixins.mobile {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__description {
+    @extend .font-inter;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    margin-top: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

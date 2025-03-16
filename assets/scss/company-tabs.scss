@@ -1,0 +1,41 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixins';
+
+.company-tabs-container {
+  @include mixins.mobile {
+    order: 1;
+  }
+}
+
+.company-tabs {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+  padding-bottom: 32px;
+  @include mixins.mobile {
+    padding: 6px 16px;
+
+    justify-content: unset;
+    overflow-x: auto;
+  }
+
+  &__button {
+    flex-shrink: 0;
+    @extend .font-inter;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 12px;
+    padding: 8px 12px;
+    color: variables.$on-secondary-container !important;
+    &_active {
+      border: 1px solid variables.$on-secondary-container;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use 'mixins';
+
+.products {
+  display: flex;
+  flex-direction: column;
+
+  &__company-info {
+    margin-bottom: 32px;
+    @include mixins.mobile {
+      margin-top: 24px;
+    }
+  }
+
+}

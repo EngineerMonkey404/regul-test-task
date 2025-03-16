@@ -1,0 +1,31 @@
+@use 'fonts';
+@use 'variables';
+@use 'mixins';
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @include mixins.mobile {
+    order: 2;
+  }
+
+  &__company-name {
+    @extend .font-inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  &__button {
+    color: variables.$on-primary-container;
+    margin: 24px 0 32px 0;
+    border-radius: 12px;
+    padding: 16px 20px;
+  }
+}

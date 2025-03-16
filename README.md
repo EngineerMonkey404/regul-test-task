@@ -58,8 +58,8 @@ GET /api/auth/login - получить данные об авторизации(
 DELETE /api/auth/logout - деавторизация
 
 ### COMPANY
-GET /api/auth/[id] - Общая информация о компании
-GET /api/auth/about - данные для раздела "О компании"
+GET /api/company/[id] - Общая информация о компании
+GET /api/company/about - данные для раздела "О компании"
 
 ### AGENTS
 GET /api/agents?companyId=1 - получить данные об агентах

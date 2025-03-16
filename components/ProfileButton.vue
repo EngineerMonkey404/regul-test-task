@@ -11,12 +11,12 @@
       class="profile-button__icon"
     />
 
-      <q-avatar
-        v-if="authStore.user"
-        size="40px"
-      >
-        <img :src="authStore.user!.image" />
-      </q-avatar>
+    <q-avatar
+      v-if="authStore.user"
+      size="40px"
+    >
+      <img :src="authStore.user!.image" />
+    </q-avatar>
     <q-skeleton
       v-if="!authStore.user"
       type="QAvatar"

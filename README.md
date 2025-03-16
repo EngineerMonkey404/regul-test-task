@@ -2,6 +2,10 @@
 
 LIVE-DEMO: https://regul.wex-web.ru/products
 
+Авторизация:<br>
+логин: admin<br>
+пароль: secret
+
 
 ## Setup
 Для запуска необходим .env файл в корне проекта:

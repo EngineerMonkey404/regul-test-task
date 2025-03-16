@@ -71,23 +71,20 @@
       line-height: 24px;
     }
 
-
     &_green {
       color: variables.$primary;
     }
   }
 
   &__map-container {
-   margin: 0 -16px 0 -16px;
+    margin: 0 -16px 0 -16px;
   }
   &__map {
     border-radius: 8px 8px 8px 0;
     width: 100%;
     object-fit: cover;
     @include mixins.mobile {
-      height: 96px
+      height: 96px;
     }
-
-
   }
 }

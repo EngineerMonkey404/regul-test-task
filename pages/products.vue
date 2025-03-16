@@ -45,6 +45,4 @@ const tabs: Tab[] = [
 const currentTab = ref(tabs[0])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,73 +1,84 @@
 # Регул | Тестовое задание
 
+LIVE-DEMO: https://regul.wex-web.ru/products
+
+
 ## Setup
+Для запуска необходим .env файл в корне проекта:
+```
+JWT_SECRET=<YOUR_SECRET>
+```
 
-Make sure to install dependencies:
+Можно сгенерировать или взять готовое значение:
+e4ecdcee1a4343bd4f45ebd2ef22abe51821bc0a6cf3b2b2beae9d9f1a0af5e9
 
+Установка зависимостей: рекомендуемая версия node: 20 и выше 
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Дев версия `http://localhost:3000`:
 
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
 
-Build the application for production:
+Билд:
 
 ```bash
 # npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
-
+Превью:
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Комментарии
+
+
+### Запросы 
+Общие типы хранятся в папке /shared/types.
+
+Примеры запросов: 
+
+```HTTP 
+### AUTH
+POST /api/auth/login - логин 
+GET /api/auth/login - получить данные об авторизации(пользователя)
+DELETE /api/auth/logout - деавторизация
+
+### COMPANY
+GET /api/auth/[id] - Общая информация о компании
+GET /api/auth/about - данные для раздела "О компании"
+
+### AGENTS
+GET /api/agents?companyId=1 - получить данные об агентах
+
+### PRODUCTS
+GET /api/products?companyId=1&categoryId=3 - получить данные о товарах и услугах
+
+```
+
+### Доработки 
+P.S. Перечислено всё то, что было в голове, но не хватило времени.
+
+В проект можно добавить следующие доработки:
+1) Loader-элементы для динамических данных с API.(отслеживать status в useFetch)
+2) Элементы-ошибки+обработка ошибок(error и useFetch) на клиентской стороне
+3) Обработка ошибок на сервере
+4) Отменять неактульные запросы при быстром изменении вкладок(AbortController). Я использовал useFetch, который не имеет signal в options, увы https://github.com/nuxt/nuxt/discussions/24257. Можно использовать useAsyncData + $fetch.
+5) Добавить пагинацию для динамических данных(или бесконечный скролл)
+6) Автоматические тесты (бэкенд части + e2e тесты)
+7) Добавить модальное окно для мобильной версии фильтров у товаров(можно использовать Teleport)
+8) Добавить проверку на авторизацию на сервере
+9) Оптимизация картинок: .webp, несколько разрешений под разные устройства

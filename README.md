@@ -1,5 +1,5 @@
 # Регул | Тестовое задание
-КОММЕНТАРИИ В КОНЦЕ README!!!
+КОММЕНТАРИИ В КОНЦЕ README!!!<br>
 LIVE-DEMO: https://regul.wex-web.ru/products
 
 Авторизация:<br>
